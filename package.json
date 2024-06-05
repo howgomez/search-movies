@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/gamja-flower": "^5.0.18",
     "@formkit/tempo": "^0.1.1",
+    "@uidotdev/usehooks": "^2.4.1",
     "dotenv": "^16.4.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

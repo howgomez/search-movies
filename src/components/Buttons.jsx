@@ -1,8 +1,8 @@
 const Buttons = ({ firstBtn, SecondBtn }) => {
   return (
     <div className="imagotipo--info">
-      <p>{firstBtn}</p>
-      <p>{SecondBtn}</p>
+      <p className="">{firstBtn}</p>
+      <p className="">{SecondBtn}</p>
     </div>
   );
 };

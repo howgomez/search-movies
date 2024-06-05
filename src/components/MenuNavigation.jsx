@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const MenuNavigation = () => {
   return (
-    <ul className="navegacion navegacion--izquierda">
+    <ul className="navegacion navegacion--izquierda text-white">
       <li>
         <Link to="/">Inicio</Link>
       </li>

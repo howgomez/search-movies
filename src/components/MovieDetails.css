@@ -5,17 +5,12 @@
 }
 
 .container-info {
-  diplay: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 50%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  bottom: 0;
 }
 img {
   border-radius: 8px;
   mask-image: linear-gradient(to bottom, transparent, black);
   -webkit-mask-image: linear-gradient(to top, transparent, black);
-}
-.container-info h1 {
-  font-size: 5rem;
+
 }
