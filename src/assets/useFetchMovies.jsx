@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 
 const useFetchMovies = (value) => {
+  const AUTHORIZATION = import.meta.env.VITE_AUTHORIZATION;
   const [data, setData] = useState(null); // Estado para almacenar los datos
   const cache = useRef({}); // Usar useRef para crear un caché que persista entre renders
 
@@ -18,8 +19,7 @@ const useFetchMovies = (value) => {
           method: "GET",
           headers: {
             accept: "application/json",
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZmZlZmZiZjdiZTMxODJhZDBmMTkxYzNmN2VkZWEyMiIsInN1YiI6IjY2NTdjZWI0MTBjYmMwMGE1OWE1MzZiMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7RSfSYQ5tZXBR2emACda0urN7l5V3-IZWOoGtdJQEE8",
+            Authorization: `${AUTHORIZATION}`,
           },
         };
 
@@ -40,4 +40,3 @@ const useFetchMovies = (value) => {
 };
 
 export default useFetchMovies;
-

@@ -3,7 +3,6 @@ import HeaderNavigation from "./HeaderNavigation";
 import InputSearch from "./InputSearch";
 import { useState } from "react";
 import CardMovies from "./CardMovies";
-
 const SearchMovies = () => {
   const [value, setValue] = useState("");
   const data = useFetchMovies(value);
@@ -24,7 +23,7 @@ const SearchMovies = () => {
           <p>No results found</p>
         )}
       </div>
-      
+
     </div>
   );
 };

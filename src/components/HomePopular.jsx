@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import CardsPopular from "./CardsPopular";
 
 const HomePopular = () => {
+  const API_KEY = import.meta.env.VITE_API_KEY;
   const [movie, setMovie] = useState([]);
 
-  const url =
-    "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=dffeffbf7be3182ad0f191c3f7edea22";
+  const url = ` https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}`;
 
   useEffect(() => {
     const getData = async () => {
