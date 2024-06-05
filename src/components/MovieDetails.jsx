@@ -4,13 +4,15 @@ import HeaderNavigation from "./HeaderNavigation";
 import "./MovieDetails.css";
 import Buttons from "./Buttons";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import { Link } from "react-router-dom";
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState([]);
   const { id } = useParams();
-  
-  const isMobile = useMediaQuery("(min-width: 768px)");
 
+  const isMobile = useMediaQuery("(min-width: 768px)");
+ 
+  const pageUrl = movie.homepage;
   const imageUrl = isMobile ? movie.backdrop_path : movie.poster_path;
   const APIKEY = import.meta.env.VITE_API_KEY;
 
@@ -39,12 +41,14 @@ const MovieDetails = () => {
         />
       </div>
       <div className="container-info w-full lg:w-[70%] flex flex-col gap-4 absolute mt-[40%] lg:mt-[4%] p-4 lg:p-40">
-        <h1 className="text-4xl lg:text-4xl text-left">{movie.title}</h1>
+        <h1 className="text-4xl md:text-4xl text-left">{movie.title}</h1>
         <span>{movie.release_date}</span>
         <span className="text-gray-400">{movie.tagline}</span>
-        <p className="text-pretty text-gray-300 text-[12px] lg:text-[17px]">{movie.overview}</p>
+        <p className="text-pretty text-gray-300 text-[12px] md:text-[17px]">
+          {movie.overview}
+        </p>
         <div className="buttons">
-          <Buttons firstBtn="⏵ Play" SecondBtn="ⓘ Ver información" />
+            <Buttons firstBtn="Play" SecondBtn="Ver información" url={pageUrl} />
         </div>
       </div>
     </div>
