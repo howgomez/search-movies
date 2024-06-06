@@ -7,7 +7,7 @@ const HeaderInformation = () => {
       <div className=" min-w-[500px] lg:gap-16 px-20">
         <img src={pnglogo} alt="Imagotipo" />
       </div>
-      <Buttons firstBtn="Play"SecondBtn="Ver información" />
+      <Buttons firstBtn="Play" SecondBtn="Ver información" />
     </div>
   );
 };

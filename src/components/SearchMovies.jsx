@@ -7,11 +7,10 @@ const SearchMovies = () => {
   const [value, setValue] = useState("");
   const data = useFetchMovies(value);
 
-
   return (
-
     <div className="section-search">
       <HeaderNavigation />
+
       <InputSearch value={value} setValue={setValue} />
 
       <div className="movies-container">
@@ -23,7 +22,6 @@ const SearchMovies = () => {
           <p>No results found</p>
         )}
       </div>
-
     </div>
   );
 };

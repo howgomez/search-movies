@@ -7,8 +7,8 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 import { Link } from "react-router-dom";
 
 const MovieDetails = () => {
-  const [movie, setMovie] = useState([]);
   const { id } = useParams();
+  const [movie, setMovie] = useState([]);
 
   const isMobile = useMediaQuery("(min-width: 768px)");
  
