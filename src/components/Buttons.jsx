@@ -11,7 +11,7 @@ const Buttons = ({ firstBtn, SecondBtn, url }) => {
             <span>{firstBtn}</span>
           </p>
         </Link>
-        <p className="flex px-6 py-2 rounded-md items-center gap-6">
+        <p className="flex px-4 py-2 rounded-md items-center gap-6">
           <CiCircleInfo />
           <span>{SecondBtn}</span>
         </p>

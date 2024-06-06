@@ -8,21 +8,22 @@ const SearchMovies = () => {
   const data = useFetchMovies(value);
 
   return (
-    <div className="section-search">
+    <>
       <HeaderNavigation />
+      <div className="section-search absolute top-0 left-0 right-0 z-10 mt-20">
+        <InputSearch value={value} setValue={setValue} />
 
-      <InputSearch value={value} setValue={setValue} />
-
-      <div className="movies-container">
-        {data && data.results ? (
-          data.results.map((movie) => (
-            <CardMovies key={movie.id} movie={movie} />
-          ))
-        ) : (
-          <p>No results found</p>
-        )}
+        <div className="movies-container">
+          {data && data.results ? (
+            data.results.map((movie) => (
+              <CardMovies key={movie.id} movie={movie} />
+            ))
+          ) : (
+            <p>No results found</p>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
