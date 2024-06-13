@@ -8,7 +8,7 @@ const CardsPopular = ({ movie }) => {
           <Link to={`/movies/${item.id}`}>
             <img
               src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-              className="object-cover"
+                                                                          className="object-cover"
             />
             <h1 className="text-[11px]  md:text-[13px] font-semibold p-2">
               {item.title}
